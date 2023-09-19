@@ -15,8 +15,8 @@
 
 
 <script setup>
-import MainSidebar from '@/components/sidebar';
-import Chat from '@/components/chat';
-import chatSidebar from '@/components/chat/chatSidebar';
+import MainSidebar from '@/components/sidebar/index.vue';
+import Chat from '@/components/chat/index.vue';
+import chatSidebar from '@/components/chat/chatSidebar/index.vue';
 
 </script>

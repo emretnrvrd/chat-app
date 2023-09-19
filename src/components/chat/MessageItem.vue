@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex w-100 my-3" :class="{ 'justify-end': messageIsMine }">
-    <v-avatar v-if="!messageIsMine" size="36" :image="message.relations.user.attrs.photo" />
+    <v-avatar v-if="!messageIsMine" size="36" :image="message.relations?.user?.attrs?.photo" />
 
     <div style="max-width: 75%;">
       <div class="content-wrapper d-inline-block bg-white elevation-3 rounded-lg px-4 py-2 ml-4"
@@ -45,7 +45,7 @@
 
 <script setup>
 import moment from 'moment';
-import { toRefs } from 'vue';
+import { onMounted, toRefs } from 'vue';
 import { useConversationStore } from "@/store/conversation";
 import Message from '@/models/Message';
 const conversationStore = useConversationStore();
@@ -69,4 +69,8 @@ const calculateColSize = (def) => {
     return 'auto'
   }
 }
+
+onMounted(() => {
+  message.value.loadUser();
+})
 </script>

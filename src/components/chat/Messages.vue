@@ -16,7 +16,7 @@
 
 
 <script setup>
-import { computed, onMounted, ref } from 'vue';
+import { computed } from 'vue';
 import MessageItem from './MessageItem.vue';
 import { VInfiniteScroll } from 'vuetify/labs/VInfiniteScroll'
 import { useConversationStore } from "@/store/conversation";
@@ -25,7 +25,6 @@ import { useAuthStore } from "@/store/auth";
 const conversationStore = useConversationStore();
 const authStore = useAuthStore();
 const messages = computed(() => conversationStore.messages);
-const messageElements = ref(null);
 
 
 const load = async ({ done, side }) => {

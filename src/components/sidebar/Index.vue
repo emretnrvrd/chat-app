@@ -13,8 +13,8 @@
 </template>
 
 <script setup>
-import Conversations from './conversations';
-import Toolbar from './toolbar';
+import Conversations from './conversations/index.vue';
+import Toolbar from './toolbar/index.vue';
 import { useConversationStore } from "@/store/conversation";
 const conversationStore = useConversationStore();
 

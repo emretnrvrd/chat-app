@@ -44,18 +44,15 @@
 
 
 <script setup>
-import { computed, onMounted, reactive, ref } from "vue";
-import { storeToRefs } from "pinia";
+import { computed, ref } from "vue";
 import { useConversationStore } from "@/store/conversation";
-import { useAuthStore } from "@/store/auth";
 import sidebarToolbar from "./sidebarToolbar.vue";
 import _ from "lodash";
 import Message from "@/models/Message";
 import moment from "moment";
 
-const authStore = useAuthStore();
+
 const conversationStore = useConversationStore();
-const { conversationSidebar, conversationSidebarState } = storeToRefs(conversationStore);
 const selectedConversation = computed(() => conversationStore.selectedConversation);
 
 const searchText = ref('');

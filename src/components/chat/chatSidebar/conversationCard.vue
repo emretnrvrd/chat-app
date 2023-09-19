@@ -12,7 +12,6 @@
 </template>
 
 <script setup>
-import { toRefs } from "vue"
 import { useConversationStore } from "@/store/conversation";
 const conversationStore = useConversationStore();
 

@@ -90,59 +90,6 @@ export const useConversationStore = defineStore('conversations', {
       this.messages = result;
       this.focusToMessage(messageId);
     },
-    async getMessages(filters = {}, flagMessageId = null) {
-
-      const process = () => {
-        let flagMessage = null;
-        if(flagMessageId != null){
-          this.clearMessages();
-          flagMessage = Message.find(flagMessageId);
-          this.sideType = 'both';
-        } else {
-          if (this.messages.length == 0) {
-            flagMessage = Message.getLast(this.selectedConversation.attrs.id);
-          } else {
-            if (filters.side == 'previous') {
-              flagMessage = this.messages[0];
-            } else {
-              flagMessage = this.messages[this.messages.length - 1]
-            }
-          }
-        }
-
-
-        const result = flagMessage.get(filters.side, filters.count);
-
-        if (filters.side == 'previous') {
-          this.addToPrevious(result);
-        } else {
-          this.addToNext(result);
-          if(flagMessageId == null){
-            this.scrollToBottom();
-          }
-        }
-        return result;
-
-      }
-
-
-      return new Promise(resolve => {
-        setTimeout(() => {
-
-          resolve(process())
-        }, 300)
-      })
-
-
-
-
-    },
-    addToPrevious(messages) {
-      this.messages = [...messages, ...this.messages];
-    },
-    addToNext(messages) {
-      this.messages = [...this.messages, ...messages];
-    },
     sendMessage() {
       const authStore = useAuthStore();
       const message = new Message({
