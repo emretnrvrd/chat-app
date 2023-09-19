@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer v-model="conversationSidebar" location="right" permanent width="480" class="p-0">
+  <v-navigation-drawer v-model="conversationSidebar" location="right" width="480" class="p-0">
 
     <div v-if="conversationSidebarState == 'info'">
       <conversation-info/>

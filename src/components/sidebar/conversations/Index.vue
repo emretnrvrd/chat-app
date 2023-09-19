@@ -6,7 +6,7 @@
 
 <script setup>
 import ConversationItem from "./ConversationItem.vue";
-import { computed, onMounted, ref } from "vue";
+import { computed, onMounted } from "vue";
 import { useConversationStore } from "@/store/conversation";
 
 const conversationStore = useConversationStore();

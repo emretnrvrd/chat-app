@@ -3,6 +3,7 @@ import { result } from "lodash";
 import Model from "./Model";
 import User from "./User";
 import { v4 as uuidv4 } from 'uuid';
+import Conversation from "./Conversation";
 
 export default class Message extends Model  {
   tableName(){
@@ -10,7 +11,7 @@ export default class Message extends Model  {
   }
 
   loadUser(){
-    this.relations.user =  User.find(this.attrs.user);
+    return this.relations.user =  User.find(this.attrs.user);
   }
 
   static fromConversation(conversationId){
@@ -22,17 +23,23 @@ export default class Message extends Model  {
 
   create(){
     let lastMessage = Message.getAll().find(message => message.attrs.conversation == this.attrs.conversation && message.attrs.next == null)
-    console.log('lastMessage', lastMessage);
+
+    let createdMessage = null;
     if(lastMessage){
       this.attrs.next = null;
       this.attrs.previous = lastMessage.attrs.id;
-      let createdMessage = super.create();
+      createdMessage = super.create();
 
-      lastMessage.update({ next: this.attrs.id })
+      lastMessage.update({ next: createdMessage.attrs.id })
     } else {
       this.attrs.next = null;
       this.attrs.previous = null;
-      super.create();
+      createdMessage = super.create();
+    }
+
+    const conversation = Conversation.find(createdMessage.attrs.conversation);
+    if(conversation){
+      conversation.update({last_message: createdMessage.attrs.id});
     }
   }
 
@@ -81,11 +88,8 @@ export default class Message extends Model  {
       while(result.length < count){
 
         let previous = loadOnePrevious(result[0]);
-        if(result.length >= count) break;
         let next = loadOneNext(result[result.length-1])
-        if(result.length >= count) break;
 
-        console.log(previous, next);
         if(!previous && !next){
           break;
         }

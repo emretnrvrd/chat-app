@@ -30,15 +30,6 @@ const messageElements = ref(null);
 
 const load = async ({ done, side }) => {
 
-  // let filters = {
-  //   side: side == 'start' ? 'previous' : 'next',
-  //   count: 10
-  // }
-
-  // const result = await conversationStore.getMessages(filters);
-
-
-
   let result = [];
   if(side == 'start'){
     result = conversationStore.loadPrevious();
@@ -47,13 +38,7 @@ const load = async ({ done, side }) => {
     result = conversationStore.loadNext();
   }
 
-  console.log('result messages', result);
-  if(result.length == 0){
-    return done('empty');
-  } else {
-    return done('ok');
-  }
-
+  result.length == 0 ? done('empty') : done('ok');
 }
 
 </script>

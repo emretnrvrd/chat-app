@@ -1,0 +1,396 @@
+{
+  "auth": [
+    {
+      "id": "2f538d84-4ade-4991-aa58-49bae5da94eb",
+      "user_id": "498253b7-9181-49cb-be9b-cfcf248c9fc9"
+    }
+  ],
+  "users": [
+    {
+      "id": "498253b7-9181-49cb-be9b-cfcf248c9fc9",
+      "name": "Elon Musk",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/9/99/Elon_Musk_Colorado_2022_%28cropped2%29.jpg",
+      "phone number": "555-987-6543"
+    },
+    {
+      "id": "65a7b4b3-7ccf-4b2d-8435-83881810df55",
+      "name": "Bill Gates",
+      "photo": "https://pbs.twimg.com/profile_images/1674815862879178752/nTGMV1Eo_400x400.jpg",
+      "phone number": "555-555-5555"
+    },
+    {
+      "id": "e9201210-5ecf-41a5-ae38-f0bd1d937fbf",
+      "name": "Mark Zuckerberg",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg/1280px-Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg",
+      "phone number": "555-888-8888"
+    },
+    {
+      "id": "a85899cd-1d2b-4bd3-9d0a-ca8f2643ab78",
+      "name": "Jeff Bezos",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Jeff_Bezos%27_iconic_laugh.jpg/1920px-Jeff_Bezos%27_iconic_laugh.jpg",
+      "phone number": "555-888-7777"
+    }
+  ],
+  "messages": [
+    {
+      "id": "19c34268-1e46-4330-be05-6761b0d5d193",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "498253b7-9181-49cb-be9b-cfcf248c9fc9",
+      "attachment": [],
+      "content": "Merhaba herkese! Yeni bir chat uygulaması fikri hakkında ne düşünüyorsunuz?",
+      "sent_at": 1663344000,
+      "next": "d8625ec1-e03c-43ed-9852-bb71c800cf5f",
+      "previous": null
+    },
+    {
+      "id": "d8625ec1-e03c-43ed-9852-bb71c800cf5f",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "a85899cd-1d2b-4bd3-9d0a-ca8f2643ab78",
+      "attachment": [],
+      "content": "Merhaba Elon, fikir ilginç görünüyor. Kullanıcı gizliliği ve güvenliği hakkında nasıl düşünüyorsunuz?",
+      "sent_at": 1663351200,
+      "next": "60cc26c2-6af6-40e4-a0c8-a626f44d773d",
+      "previous": "19c34268-1e46-4330-be05-6761b0d5d193"
+    },
+    {
+      "id": "60cc26c2-6af6-40e4-a0c8-a626f44d773d",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "e9201210-5ecf-41a5-ae38-f0bd1d937fbf",
+      "attachment": [],
+      "content": "Selam arkadaşlar! Ben de katılıyorum, güvenlik çok önemli. Ayrıca hangi platformları hedefliyoruz?",
+      "sent_at": 1663358400,
+      "next": "acf8ab57-e27e-4c1d-9abd-06f38c231a08",
+      "previous": "d8625ec1-e03c-43ed-9852-bb71c800cf5f"
+    },
+    {
+      "id": "acf8ab57-e27e-4c1d-9abd-06f38c231a08",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "65a7b4b3-7ccf-4b2d-8435-83881810df55",
+      "content": "Merhaba herkese, ben de düşüncelerinize katılıyorum. İşte bazı önerilerim:...",
+      "sent_at": 1663365600,
+      "next": "8dcbd8cd-f4f6-47bb-8fb0-8405a981a3ce",
+      "previous": "60cc26c2-6af6-40e4-a0c8-a626f44d773d"
+    },
+    {
+      "id": "8dcbd8cd-f4f6-47bb-8fb0-8405a981a3ce",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "498253b7-9181-49cb-be9b-cfcf248c9fc9",
+      "attachment": [],
+      "content": "Güvenlik konusunu mutlaka ele almalıyız. Ayrıca iOS ve Android için uyumlu olmalı.",
+      "sent_at": 1663372800,
+      "next": "61b7eae3-bf17-4c92-b62d-2bcea3d89b17",
+      "previous": "acf8ab57-e27e-4c1d-9abd-06f38c231a08"
+    },
+    {
+      "id": "61b7eae3-bf17-4c92-b62d-2bcea3d89b17",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "a85899cd-1d2b-4bd3-9d0a-ca8f2643ab78",
+      "attachment": [],
+      "content": "Katılıyorum. Ayrıca kullanıcı verilerini nasıl koruyacağımızı da düşünmemiz gerekiyor.",
+      "sent_at": 1663380000,
+      "next": "1312c3b2-521f-4af7-a899-c0f0d9598c83",
+      "previous": "8dcbd8cd-f4f6-47bb-8fb0-8405a981a3ce"
+    },
+    {
+      "id": "1312c3b2-521f-4af7-a899-c0f0d9598c83",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "e9201210-5ecf-41a5-ae38-f0bd1d937fbf",
+      "attachment": [],
+      "content": "Platformumuzun kullanıcı dostu olması da önemli. Arayüz tasarımına ne dersiniz?",
+      "sent_at": 1663387200,
+      "next": "56693847-d2a8-4b76-8f8e-fefd190d4203",
+      "previous": "61b7eae3-bf17-4c92-b62d-2bcea3d89b17"
+    },
+    {
+      "id": "56693847-d2a8-4b76-8f8e-fefd190d4203",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "65a7b4b3-7ccf-4b2d-8435-83881810df55",
+      "content": "Tasarım konusunu da göz önünde bulundurmalıyız. Ayrıca reklamcılık potansiyelini düşündünüz mü?",
+      "sent_at": 1663394400,
+      "next": "cbf6c7d1-e95d-4a55-a645-b736c71489e6",
+      "previous": "1312c3b2-521f-4af7-a899-c0f0d9598c83"
+    },
+    {
+      "id": "cbf6c7d1-e95d-4a55-a645-b736c71489e6",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "498253b7-9181-49cb-be9b-cfcf248c9fc9",
+      "attachment": [],
+      "content": "Reklamcılık geliriyle sürdürülebilirliği sağlayabiliriz. Ama kullanıcı deneyimini bozmamalıyız.",
+      "sent_at": 1663401600,
+      "next": "f65c979a-ed50-4b54-9499-e956c70209db",
+      "previous": "56693847-d2a8-4b76-8f8e-fefd190d4203"
+    },
+    {
+      "id": "f65c979a-ed50-4b54-9499-e956c70209db",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "a85899cd-1d2b-4bd3-9d0a-ca8f2643ab78",
+      "attachment": [],
+      "content": "Kullanıcı deneyimi önemli, ama rekabetçi olmak da gerekiyor. Diğer chat uygulamalarından nasıl farklılaşacağız?",
+      "sent_at": 1663408800,
+      "next": "c3479367-a554-4b5f-8233-c4ed5b2c9e8d",
+      "previous": "cbf6c7d1-e95d-4a55-a645-b736c71489e6"
+    },
+    {
+      "id": "c3479367-a554-4b5f-8233-c4ed5b2c9e8d",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "e9201210-5ecf-41a5-ae38-f0bd1d937fbf",
+      "attachment": [],
+      "content": "Farklılaşma konusunda daha fazla düşünmeliyiz. Özgün bir özellik veya fayda sunmalıyız.",
+      "sent_at": 1663416000,
+      "next": "f667a04b-6065-4cdd-bfbb-4934e76a894a",
+      "previous": "f65c979a-ed50-4b54-9499-e956c70209db"
+    },
+    {
+      "id": "f667a04b-6065-4cdd-bfbb-4934e76a894a",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "65a7b4b3-7ccf-4b2d-8435-83881810df55",
+      "content": "Ayrıca iş dünyasına yönelik bir sürümü de düşünmeliyiz. İşletmeler için nasıl bir değer sunabiliriz?",
+      "sent_at": 1663423200,
+      "next": "19371179-a3a6-496b-bc96-f97fcd7b631e",
+      "previous": "c3479367-a554-4b5f-8233-c4ed5b2c9e8d"
+    },
+    {
+      "id": "19371179-a3a6-496b-bc96-f97fcd7b631e",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "498253b7-9181-49cb-be9b-cfcf248c9fc9",
+      "attachment": [],
+      "content": "İş dünyası için özellikler eklemek mantıklı. İşbirliği araçları, güvenlik önlemleri, vb.",
+      "sent_at": 1663430400,
+      "next": "f520428c-9ad8-4445-9dec-cfe52f4ec542",
+      "previous": "f667a04b-6065-4cdd-bfbb-4934e76a894a"
+    },
+    {
+      "id": "f520428c-9ad8-4445-9dec-cfe52f4ec542",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "a85899cd-1d2b-4bd3-9d0a-ca8f2643ab78",
+      "attachment": [],
+      "content": "İş dünyası için güvenlik ve uyumluluk önemli. İşletmelerin verilerini nasıl koruyacağız?",
+      "sent_at": 1663437600,
+      "next": "d0baca1b-302f-448a-97de-94aaac05417a",
+      "previous": "19371179-a3a6-496b-bc96-f97fcd7b631e"
+    },
+    {
+      "id": "d0baca1b-302f-448a-97de-94aaac05417a",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "e9201210-5ecf-41a5-ae38-f0bd1d937fbf",
+      "attachment": [],
+      "content": "İş dünyası için özel bir sürüm geliştirirken, kişisel kullanıcılar için de cazip kalmalıyız.",
+      "sent_at": 1663444800,
+      "next": "1a350de7-69e8-401b-9c17-30b0db982f88",
+      "previous": "f520428c-9ad8-4445-9dec-cfe52f4ec542"
+    },
+    {
+      "id": "1a350de7-69e8-401b-9c17-30b0db982f88",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "65a7b4b3-7ccf-4b2d-8435-83881810df55",
+      "content": "Kullanıcı tabanını büyütmek de önemli. Pazarlama stratejilerimizi nasıl oluşturacağız?",
+      "sent_at": 1663452000,
+      "next": "41a4ed8c-1ec9-48be-913d-b9f9d43dadf1",
+      "previous": "d0baca1b-302f-448a-97de-94aaac05417a"
+    },
+    {
+      "id": "41a4ed8c-1ec9-48be-913d-b9f9d43dadf1",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "498253b7-9181-49cb-be9b-cfcf248c9fc9",
+      "attachment": [],
+      "content": "Pazarlama konusunda yaratıcı olmalıyız. Sosyal medya, reklam kampanyaları, vb.",
+      "sent_at": 1663459200,
+      "next": "193d8409-ecb1-45e3-833f-0238ce04cad9",
+      "previous": "1a350de7-69e8-401b-9c17-30b0db982f88"
+    },
+    {
+      "id": "193d8409-ecb1-45e3-833f-0238ce04cad9",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "a85899cd-1d2b-4bd3-9d0a-ca8f2643ab78",
+      "attachment": [],
+      "content": "Kullanıcıların uygulamamızı neden tercih etmeleri gerektiğini vurgulamalıyız. Değer teklifimiz nedir?",
+      "sent_at": 1663466400,
+      "next": "6f42d98c-332c-4818-bfc1-aca0a963eba6",
+      "previous": "41a4ed8c-1ec9-48be-913d-b9f9d43dadf1"
+    },
+    {
+      "id": "6f42d98c-332c-4818-bfc1-aca0a963eba6",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "e9201210-5ecf-41a5-ae38-f0bd1d937fbf",
+      "attachment": [],
+      "content": "Değer teklifimizi net bir şekilde iletmeliyiz. Neden bu uygulamayı kullanmalılar?",
+      "sent_at": 1663473600,
+      "next": "79fdd793-d1fb-4d14-b19e-754a97f42c02",
+      "previous": "193d8409-ecb1-45e3-833f-0238ce04cad9"
+    },
+    {
+      "id": "79fdd793-d1fb-4d14-b19e-754a97f42c02",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "65a7b4b3-7ccf-4b2d-8435-83881810df55",
+      "content": "Rakiplerimizin neler yaptığını da göz önünde bulundurmalıyız. Hangi alanlarda daha iyiyiz?",
+      "sent_at": 1663480800,
+      "next": "acc84294-61d8-4534-acea-9735af1a28e1",
+      "previous": "6f42d98c-332c-4818-bfc1-aca0a963eba6"
+    },
+    {
+      "id": "acc84294-61d8-4534-acea-9735af1a28e1",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "498253b7-9181-49cb-be9b-cfcf248c9fc9",
+      "attachment": [],
+      "content": "Rakiplerimizden farklılaşmak için teknoloji ve kullanıcı deneyimine yatırım yapmalıyız.",
+      "sent_at": 1663488000,
+      "next": "e2fc9cb2-33f4-4cb2-8e8d-b755cc21e0fd",
+      "previous": "79fdd793-d1fb-4d14-b19e-754a97f42c02"
+    },
+    {
+      "id": "e2fc9cb2-33f4-4cb2-8e8d-b755cc21e0fd",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "a85899cd-1d2b-4bd3-9d0a-ca8f2643ab78",
+      "attachment": [],
+      "content": "Teknolojik üstünlüğümüzü koruyarak, uzun vadeli başarı elde edebiliriz.",
+      "sent_at": 1663495200,
+      "next": "3be78d7f-dcf8-42df-a2c6-d6f2f8e58c40",
+      "previous": "acc84294-61d8-4534-acea-9735af1a28e1"
+    },
+    {
+      "id": "3be78d7f-dcf8-42df-a2c6-d6f2f8e58c40",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "e9201210-5ecf-41a5-ae38-f0bd1d937fbf",
+      "attachment": [],
+      "content": "Uygulamamızın geleceği parlak görünüyor. İşte nasıl ilerleyeceğimize dair birkaç öneri...",
+      "sent_at": 1663502400,
+      "next": "cdc93ba2-1f19-4a14-a7a2-7684fd956575",
+      "previous": "e2fc9cb2-33f4-4cb2-8e8d-b755cc21e0fd"
+    },
+    {
+      "id": "cdc93ba2-1f19-4a14-a7a2-7684fd956575",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "65a7b4b3-7ccf-4b2d-8435-83881810df55",
+      "content": "Harika, geliştirmemiz gereken çok şey var. İşe nereden başlayacağımızı düşünüyorsunuz?",
+      "sent_at": 1663509600,
+      "next": "d378eb4f-ed3c-4c5a-8e48-5a6f58d36761",
+      "previous": "3be78d7f-dcf8-42df-a2c6-d6f2f8e58c40"
+    },
+    {
+      "id": "d378eb4f-ed3c-4c5a-8e48-5a6f58d36761",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "498253b7-9181-49cb-be9b-cfcf248c9fc9",
+      "attachment": [],
+      "content": "Öncelikle bir ekibin kurulması gerekiyor. Yazılım geliştiriciler, tasarımcılar, güvenlik uzmanları...",
+      "sent_at": 1663516800,
+      "next": "86c49645-33d7-4d99-a862-0bef8914447e",
+      "previous": "cdc93ba2-1f19-4a14-a7a2-7684fd956575"
+    },
+    {
+      "id": "86c49645-33d7-4d99-a862-0bef8914447e",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "a85899cd-1d2b-4bd3-9d0a-ca8f2643ab78",
+      "attachment": [],
+      "content": "Ekibimizi oluşturduktan sonra, bir geliştirme süreci planlamalıyız. Agile mi yoksa Waterfall mı tercih edersiniz?",
+      "sent_at": 1663524000,
+      "next": "548c32b2-d768-4802-ab71-61a9e1d38c34",
+      "previous": "d378eb4f-ed3c-4c5a-8e48-5a6f58d36761"
+    },
+    {
+      "id": "548c32b2-d768-4802-ab71-61a9e1d38c34",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "e9201210-5ecf-41a5-ae38-f0bd1d937fbf",
+      "attachment": [],
+      "content": "Agile, hızlı ve esnek olmamızı sağlar. Ancak dikkatlice yönetilmeli.",
+      "sent_at": 1663531200,
+      "next": "181b696b-c1a7-41b0-89c6-0f1048c49891",
+      "previous": "86c49645-33d7-4d99-a862-0bef8914447e"
+    },
+    {
+      "id": "181b696b-c1a7-41b0-89c6-0f1048c49891",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "65a7b4b3-7ccf-4b2d-8435-83881810df55",
+      "content": "Agile'a katılıyorum. İlk prototip ne zaman hazır olabilir?",
+      "sent_at": 1663538400,
+      "next": "643440a9-5102-497c-b78a-686741aea200",
+      "previous": "548c32b2-d768-4802-ab71-61a9e1d38c34"
+    },
+    {
+      "id": "643440a9-5102-497c-b78a-686741aea200",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "498253b7-9181-49cb-be9b-cfcf248c9fc9",
+      "attachment": [],
+      "content": "Prototipi birkaç ay içinde hazırlayabiliriz. Temel özellikleri önce test edelim.",
+      "sent_at": 1663545600,
+      "next": "176d20fb-ee49-44e9-814e-1e1cc0ff14be",
+      "previous": "181b696b-c1a7-41b0-89c6-0f1048c49891"
+    },
+    {
+      "id": "176d20fb-ee49-44e9-814e-1e1cc0ff14be",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "a85899cd-1d2b-4bd3-9d0a-ca8f2643ab78",
+      "attachment": [],
+      "content": "Prototipin ardından beta testlerine başlamalıyız. Erken geri bildirim almak önemli.",
+      "sent_at": 1663552800,
+      "next": "53ae149c-fb23-4997-9840-2185914ec893",
+      "previous": "643440a9-5102-497c-b78a-686741aea200"
+    },
+    {
+      "id": "53ae149c-fb23-4997-9840-2185914ec893",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "e9201210-5ecf-41a5-ae38-f0bd1d937fbf",
+      "attachment": [],
+      "content": "Beta testleri sırasında kullanıcılarla etkileşim kurmalıyız. Geri dönüşler değerli olacak.",
+      "sent_at": 1663560000,
+      "next": "b88fd7fe-98cb-42f6-9345-728860109aba",
+      "previous": "176d20fb-ee49-44e9-814e-1e1cc0ff14be"
+    },
+    {
+      "id": "b88fd7fe-98cb-42f6-9345-728860109aba",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "65a7b4b3-7ccf-4b2d-8435-83881810df55",
+      "content": "Geri bildirimleri dikkatlice analiz etmeli ve iyileştirmeler yapmalıyız.",
+      "sent_at": 1663567200,
+      "next": "52dda03a-098a-43c3-a704-9d51ff13db34",
+      "previous": "53ae149c-fb23-4997-9840-2185914ec893"
+    },
+    {
+      "id": "52dda03a-098a-43c3-a704-9d51ff13db34",
+      "conversation": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "498253b7-9181-49cb-be9b-cfcf248c9fc9",
+      "attachment": [],
+      "content": "İyileştirmeler sonrası, kullanıcı tabanını genişletmeye ve pazarlama stratejilerimize odaklanmalıyız.",
+      "sent_at": 1663574400,
+      "next": null,
+      "previous": "b88fd7fe-98cb-42f6-9345-728860109aba"
+    },
+    {
+      "id": "4f2a67dc-79b2-47ad-86a4-9514c4c6fb89",
+      "conversation": "8u330e0c-4b60-4998-a07c-17a12496ace8",
+      "user": "a85899cd-1d2b-4bd3-9d0a-ca8f2643ab78",
+      "attachment": [],
+      "content": "Selam Elon, Naber!",
+      "sent_at": 1663574400,
+      "next": null,
+      "previous": null
+    }
+  ],
+  "conversations": [
+    {
+      "id": "7d330e0c-4b60-4998-a07c-17a12496ace8",
+      "type": "group",
+      "title": "Yeni Uygulama Hakkında",
+      "photo": "https://cdn.pixabay.com/photo/2020/10/17/13/21/telegram-5662082_960_720.png",
+      "users": [
+        "498253b7-9181-49cb-be9b-cfcf248c9fc9",
+        "a85899cd-1d2b-4bd3-9d0a-ca8f2643ab78",
+        "65a7b4b3-7ccf-4b2d-8435-83881810df55",
+        "e9201210-5ecf-41a5-ae38-f0bd1d937fbf"
+      ],
+      "last_message": "52dda03a-098a-43c3-a704-9d51ff13db34"
+    },
+    {
+      "id": "8u330e0c-4b60-4998-a07c-17a12496ace8",
+      "type": "singular",
+      "title": "",
+      "photo": "",
+      "users": [
+        "498253b7-9181-49cb-be9b-cfcf248c9fc9",
+        "a85899cd-1d2b-4bd3-9d0a-ca8f2643ab78"
+      ],
+      "last_message": "4f2a67dc-79b2-47ad-86a4-9514c4c6fb89"
+    }
+
+  ]
+}
+

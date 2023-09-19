@@ -21,13 +21,17 @@
         <v-divider></v-divider>
 
         <v-list class="py-0" v-if="results.length > 0">
-          <v-list-item class="py-3"
+          <v-list-item class="py-3 border-bottom"
             v-for="result in results"
             :key="result.original.attrs.id"
             :value="result.original.attrs.id"
             @click="goMessage(result.original.attrs.id)">
+            <div>
+              <div class="text-body font-weight-bold ">{{ result.original.relations.user.attrs.name }}</div>
+              <p class="text-disabled mt-2" v-html="result.content"></p>
+              <div class="text-body-2 text-disabled text-right">{{ moment(result.original.attrs.sent_at).format('lll') }}</div>
 
-            <p v-html="result.content"></p>
+            </div>
           </v-list-item>
         </v-list>
         <div v-else class="d-flex justify-center py-16">
@@ -47,6 +51,7 @@ import { useAuthStore } from "@/store/auth";
 import sidebarToolbar from "./sidebarToolbar.vue";
 import _ from "lodash";
 import Message from "@/models/Message";
+import moment from "moment";
 
 const authStore = useAuthStore();
 const conversationStore = useConversationStore();

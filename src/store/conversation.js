@@ -14,10 +14,16 @@ export const useConversationStore = defineStore('conversations', {
     selectedConversation: null,
     sideType: 'start',
     messages: [],
+    message: {
+      content: '',
+      attachment: [],
+    },
+    emojiMenu: false,
     conversationSidebar: false,
     conversationSidebarState: null,
     selectedUser: null,
     messagesSize: 20,
+    mainDrawerShowing: true,
   }),
 
   getters: {
@@ -26,9 +32,13 @@ export const useConversationStore = defineStore('conversations', {
   actions: {
     fetchConversationMenuItems() {
       const authStore = useAuthStore();
-      this.conversationMenuItems = Conversation.getAll().filter(
+      const conversations = Conversation.getAll().filter(
         conversation => conversation.attrs.users.includes(authStore.authUser.attrs.id)
       );
+      conversations.forEach(conversation => { conversation.loadUsers(); conversation.loadLastMessage();});
+      this.conversationMenuItems =  _.orderBy(conversations, (conversation) => {
+        return conversation.relations.last_message?.attrs?.sent_at ?? 0;
+      }, ['desc']);
     },
     setSelectedConversation(id) {
       this.closeSidebar();
@@ -39,14 +49,12 @@ export const useConversationStore = defineStore('conversations', {
         this.clearMessages();
         this.loadLastMessages();
         this.scrollToBottom();
+        this.emojiMenu = false;
       }
 
     },
     clearMessages(){
       this.messages = [];
-    },
-    async loadMessages(filters = {}, flagMessageId){
-
     },
     async loadLastMessages(){
       const flagMessage = Message.getLast(this.selectedConversation.attrs.id);
@@ -59,7 +67,6 @@ export const useConversationStore = defineStore('conversations', {
       return [];
     },
     loadPrevious(){
-      console.log('loadPrevious');
       let result = [];
       if(this.messages.length > 0 ){
         result = this.messages[0].get('previous', this.messagesSize);
@@ -68,7 +75,6 @@ export const useConversationStore = defineStore('conversations', {
       return result;
     },
     loadNext(){
-      console.log('loadNext');
       let result = [];
       if(this.messages.length > 0 ){
         result = this.messages[this.messages.length-1].get('next', this.messagesSize);
@@ -137,18 +143,43 @@ export const useConversationStore = defineStore('conversations', {
     addToNext(messages) {
       this.messages = [...this.messages, ...messages];
     },
-    addNewMessage(data) {
+    sendMessage() {
+      const authStore = useAuthStore();
       const message = new Message({
-        user: data.user.attrs.id,
-        conversation: data.conversation.attrs.id,
-        content: data.content,
-        attachment: [],
+        ...this.message,
+        user: authStore.authUser.attrs.id,
+        conversation: this.selectedConversation.attrs.id,
         sent_at: (new Date()).getTime()
       });
       message.create();
       message.loadUser();
       this.messages.push(message);
       this.scrollToBottom('smooth');
+      this.clearMessage();
+      this.fetchConversationMenuItems();
+    },
+    clearMessage(){
+      this.message.content = '';
+      this.message.attachment = [];
+    },
+    async convertFiles(files){
+      const convertedFiles = [];
+      for(let i = 0; i < files.length; i++){
+        try{
+          convertedFiles.push(await this.toBase64(files[i]));
+        } catch(e) {
+          console.error(e);
+        }
+      }
+      return convertedFiles;
+    },
+    async toBase64 (file){
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+      })
     },
     scrollToBottom(behavior = undefined) {
       setTimeout(() => {
